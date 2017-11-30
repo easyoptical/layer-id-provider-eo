@@ -1,0 +1,42 @@
+#home-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+#home-content {
+  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  margin: auto;
+  padding: 1em;
+  width: 600px;
+  h1 {
+    color: #19a5e4;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 3rem;
+  }
+}
+
+#details {
+  display: flex;
+  div {
+    box-sizing: border-box;
+    &:first-child {
+      margin-right: 1em;
+    }
+  }
+  #status {
+    flex: 3;
+  }
+  #resources {
+    flex: 5;
+  }
+  #next {
+    flex: 2;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}

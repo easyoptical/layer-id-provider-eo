@@ -1,0 +1,24 @@
+#users-content {
+  margin: auto;
+  width: 800px;
+  table {
+    width: 100%;
+  }
+  input[type="checkbox"] + label {
+    display: inline-block;
+  }
+  #user_last_name {
+    margin-bottom: 0
+  }
+  #force-admin-prompt {
+    color: #999;
+    margin-top: 0;
+  }
+  #save_new_user {
+    margin: 1.5rem 0;
+  }
+  #cancel-new-user {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}

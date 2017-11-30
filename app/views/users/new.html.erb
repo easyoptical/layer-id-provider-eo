@@ -1,0 +1,32 @@
+<div id='users-content'>
+  <h1>New user</h1>
+  <%= form_for(User.new) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: 'user@example.com' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: 'Pick something secure' %>
+
+    <%= f.label :display_name %>
+    <%= f.text_field :display_name, value: '', placeholder: 'User name' %>
+
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, placeholder: 'User' %>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, placeholder: 'Name' %>
+
+    <%= f.label :avatar_url %>
+    <%= f.text_field :avatar_url, placeholder: 'https://example.com/avatar.jpg', value: "https://s3.amazonaws.com/static.layer.com/sdk/sampleavatars/#{Random.new.rand(6)}.png" %>
+
+    <%= f.check_box :is_admin, checked: @force_admin, disabled: @force_admin %> <%= f.label :is_admin, disabled: @force_admin %>
+    <% if @force_admin %>
+      <p id='force-admin-prompt'><small>The first user you create must be an admin user</small></p>
+    <% end %>
+
+    <div id='save_new_user'>
+      <%= f.submit 'Save new user' %>
+      <span id='cancel-new-user'><%= link_to('Cancel', users_path) %></span>
+    </div>
+  <% end %>
+</div>
